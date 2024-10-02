@@ -2,32 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("/fonts/cooper-hewitt/CooperHewitt-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Optionally, add other weights or styles if available */
+@font-face {
+  font-family: "Cooper Hewitt";
+  src: url("/fonts/cooper-hewitt/CooperHewitt-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "David Libre";
+  src: url("/fonts/david-libre/DavidLibre-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "David Libre";
+  src: url("/fonts/david-libre/DavidLibre-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("/fonts/work-sans/WorkSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("/fonts/work-sans/WorkSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400 700;
+  font-style: italic;
+}
+
+.custom-after::after {
+  content: " / ";
 }
