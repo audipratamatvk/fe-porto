@@ -25,9 +25,9 @@ export default function Patio() {
         <nav className="bg-[#f05d5d] py-5 px-10 font-lora">
           <ul className="flex">
             {links.map((link) => (
-              <li>
+              <li key={link.label}>
+                {" "}
                 <Link
-                  key={link.label}
                   href={link.href}
                   className="mr-4 text-white hover:text-[#5000ff] hover:border-b-2 border-white"
                 >
